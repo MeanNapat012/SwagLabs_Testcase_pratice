@@ -1,0 +1,10 @@
+username: standard-user
+valid_password: secret_sauce
+
+empty_username: ""
+empty_password: ""
+
+invalid_username: test123
+invalid_username: test456
+
+lock_password: locked_out_user
