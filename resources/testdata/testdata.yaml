@@ -1,10 +1,7 @@
-username: standard-user
+username: standard_user
 valid_password: secret_sauce
 
-empty_username: ""
-empty_password: ""
-
 invalid_username: test123
-invalid_username: test456
+invalid_password: test456
 
-lock_password: locked_out_user
+lock_username: locked_out_user
