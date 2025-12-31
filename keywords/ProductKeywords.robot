@@ -30,5 +30,29 @@ Cart badge should be
     Wait Until Element Is Visible    ${badge}    10s
     Element Text Should Be           ${badge}    ${expected_count}
 
+Product detail page should be display
+    [Arguments]    ${product_name}
+    Wait Until Element Is Visible
+    ...    xpath=//div[@data-test="inventory-item-name" and normalize-space(.)="${product_name}"]
+    Page Should Contain Element    xpath=//button[text()="Back to products"]
+    Page Should Contain Element    xpath=//button[text()="Add to cart" or text()="Remove"]
 
 
+Click to Product detail
+    [Arguments]    ${product_name}
+    ${product}=    Set Variable
+    ...    xpath=//div[@data-test="inventory-item-name" and normalize-space(.)="${product_name}"]
+    Wait Until Page Contains Element    ${product}    10s
+    Scroll Element Into View            ${product}
+    Click Element                       ${product}
+
+Add Product to cart on Product detail
+    ${add_btn}=    Set Variable
+    ...    xpath=//button[text()="Add to cart"]
+    Wait Until Element Is Visible    ${add_btn}    10s
+    Click Element    ${add_btn}
+
+Check Product button text should be on Product detail
+    [Arguments]    ${expected_text}
+    ${btn}=    Set Variable
+    ...    xpath=//button[@class="btn btn_primary btn_small btn_inventory" and text()="${expected_text}"]
