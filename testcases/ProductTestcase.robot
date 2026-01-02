@@ -52,3 +52,13 @@ As a user, I want add Product on Product detail page
     Then Check button text should be "Remove"
     Then Check cart badge count "1"
     [Teardown]    Cleanup cart and return to product page
+
+As a user, I want remove Product detail page
+    When user go to Product detail "Sauce Labs Bolt T-Shirt"
+    Then Check Product detail page should be display "Sauce Labs Bolt T-Shirt"
+    Then user click "Add to cart" button on Product detail
+    Then Check button text should be "Remove"
+    Then Check cart badge count "1"
+    Then user click "Remove" button on Product detail
+    Then Check cart badge should not be visible
+    [Teardown]    Cleanup cart and return to product page
