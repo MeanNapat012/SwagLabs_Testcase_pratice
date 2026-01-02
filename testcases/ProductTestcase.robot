@@ -40,7 +40,7 @@ As a user, I can remove many Product to cart on Product page
     Then Check cart badge should not be visible
     [Teardown]    Remove all products from cart
 
-As a user, I want to Product detail page
+As a user, I want go to Product detail page
     When user go to Product detail "Sauce Labs Backpack"
     Then Check Product detail page should be display "Sauce Labs Backpack"
     [Teardown]    user go back to Product page

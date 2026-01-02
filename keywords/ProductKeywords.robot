@@ -11,7 +11,7 @@ Add Product to cart by name
     Click Element    ${add_btn}
 
 Remove Product from cart by name on Product page
-    [Arguments]    ${product_name}
+    [Arguments]    ${product_name}  
     ${remove_btn}=    Set Variable
     ...    xpath=//div[text()="${product_name}"]/ancestor::div[@class="inventory_item"]//button[text()="Remove"]
     Wait Until Element Is Visible    ${remove_btn}
