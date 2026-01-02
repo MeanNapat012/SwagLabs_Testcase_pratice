@@ -53,8 +53,8 @@ user go to Product detail "${product_name}"
 user go back to Product page
     CommonKeywords.Wait until element is ready then click element    xpath=//button[text()="Back to products"]
 
-user add product on product detail
-    ProductKeywords.Add Product to cart on Product detail
+user click "${expected_text}" button on Product detail
+    ProductKeywords.Click Product Button on Product detail    ${expected_text}
 
 Check button text should be "${expected_text}"
     ProductKeywords.Check Product button text should be on Product detail    ${expected_text}

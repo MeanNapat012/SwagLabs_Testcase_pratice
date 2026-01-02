@@ -46,9 +46,10 @@ Click to Product detail
     Scroll Element Into View            ${product}
     Click Element                       ${product}
 
-Add Product to cart on Product detail
+Click Product Button on Product detail
+    [Arguments]    ${expected_text}
     ${add_btn}=    Set Variable
-    ...    xpath=//button[text()="Add to cart"]
+    ...    xpath=//button[text()="${expected_text}"]
     Wait Until Element Is Visible    ${add_btn}    10s
     Click Element    ${add_btn}
 

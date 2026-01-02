@@ -48,7 +48,7 @@ As a user, I want to Product detail page
 As a user, I want add Product on Product detail page
     When user go to Product detail "Sauce Labs Backpack"
     Then Check Product detail page should be display "Sauce Labs Backpack"
-    Then user add product on product detail
+    Then user click "Add to cart" button on Product detail
     Then Check button text should be "Remove"
     Then Check cart badge count "1"
     [Teardown]    Cleanup cart and return to product page
