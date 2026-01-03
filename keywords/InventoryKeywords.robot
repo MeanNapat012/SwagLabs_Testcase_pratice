@@ -33,7 +33,6 @@ user remove many product from cart "${product_name_01}", "${product_name_02}" an
     CartpageKeywords.Remove Product from cart by name on Your Cart    ${product_name_02}
     CartpageKeywords.Remove Product from cart by name on Your Cart    ${product_name_03}
 
-
 Cleanup all and return to product page from your cart    
     Run Keyword And Ignore Error    user go back to product page from your cart
     Run Keyword And Ignore Error    Remove all products from cart

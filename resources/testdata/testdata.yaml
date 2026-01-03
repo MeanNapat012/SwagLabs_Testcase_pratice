@@ -5,3 +5,8 @@ invalid_username: test123
 invalid_password: test456
 
 lock_username: locked_out_user
+
+
+firstname: Alex
+lastname: Afton
+postalcode: 001
